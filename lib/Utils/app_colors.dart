@@ -11,7 +11,7 @@ class AppColors {
   static const Color NEW_GREY_COLOR = Color(0xffD2D2D2);
   static const Color TEAL_COLOR = Color(0xff66B9B1);
   static const Color PURPLE_COLOR = Color(0xff8054A1);
-  static Color GREY_COLOR = Colors.grey;
+  static Color GREY_COLOR = Color(0xff96A0B5);
   static const Color GREY_Light_COLOR = Color(0xffFAFAFA);
   static const Color BLACK_COLOR = Colors.black;
   static const Color WHITE_COLOR = Colors.white;
@@ -22,4 +22,5 @@ class AppColors {
   static const Color GOLD_COLOR = Color(0xffF2B705);
   static const Color CATEGORIES_COLOR = Color(0xff707070);
   static const Color DARK_COLOR = Color(0xff2C2C2E);
+  static const Color NEUTRAL_COLOR = Color(0xff191D2B);
 }

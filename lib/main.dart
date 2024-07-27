@@ -34,8 +34,8 @@ class _MyAppState extends State<MyApp> {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       translations: Translation(),
-      locale: const Locale('ar'),
-      fallbackLocale: const Locale('ar'),
+      locale: const Locale('en'),
+      fallbackLocale: const Locale('en'),
       localizationsDelegates: const [GlobalMaterialLocalizations.delegate],
       title: 'Task Management App',
       theme: ThemeData(
@@ -46,7 +46,7 @@ class _MyAppState extends State<MyApp> {
         progressIndicatorTheme: const ProgressIndicatorThemeData(color: AppColors.MAIN_COLOR),
         appBarTheme: const AppBarTheme(foregroundColor: AppColors.WHITE_COLOR),
         canvasColor: Colors.transparent,
-        fontFamily: "Bahij TheSansArabic",
+        // fontFamily: "Bahij TheSansArabic",
       ),
       initialRoute: AppRoutes.loginScreen,
       getPages: AppRoutes.routes,

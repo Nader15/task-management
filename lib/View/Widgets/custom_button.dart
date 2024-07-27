@@ -1,14 +1,17 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:get/get_utils/src/extensions/internacionalization.dart';
 
 import '../../Utils/app_colors.dart';
 
 class CustomButton extends StatelessWidget {
-   CustomButton({Key? key, this.title, this.backgroundColor=AppColors.SECOND_COLOR, this.foregroundColor=AppColors.SECOND_COLOR, this.overlayColor=AppColors.SECOND_COLOR,this.onPress, this.borderSideColor=AppColors.SECOND_COLOR}) : super(key: key);
-   final title;
+   CustomButton({Key? key, this.height = 50,this.title , this.backgroundColor=AppColors.SECOND_COLOR, this.foregroundColor=AppColors.SECOND_COLOR, this.overlayColor=AppColors.SECOND_COLOR,this.onPress, this.borderSideColor=AppColors.SECOND_COLOR}) : super(key: key);
+   Widget? title;
    final backgroundColor;
    final foregroundColor;
    Color? borderSideColor;
+   double? height;
    final overlayColor ;
    Function()? onPress;
 
@@ -16,6 +19,7 @@ class CustomButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       width: double.infinity,
+      height: height,
       child: ElevatedButton(
         onPressed: onPress,
         style: ButtonStyle(
@@ -32,9 +36,7 @@ class CustomButton extends StatelessWidget {
           backgroundColor: MaterialStateProperty.all(backgroundColor),
           foregroundColor: MaterialStateProperty.all(foregroundColor),
         ),
-        child: Text(
-          title,
-        ),
+        child: title,
       ),
     );
   }

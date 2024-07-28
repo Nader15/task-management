@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/get.dart';
+import 'package:task_management/Routes/routes.dart';
 import 'package:task_management/Utils/app_colors.dart';
 import 'package:task_management/Utils/app_constants.dart';
 import 'package:task_management/Utils/app_icons.dart';
@@ -57,7 +59,9 @@ class LoginScreen extends StatelessWidget {
                 ),
                 const SizedBox(height: 20),
                 CustomButton(
-                  onPress: () {},
+                  onPress: () {
+                    Get.toNamed(Routes.mainScreen);
+                  },
                   height: 56,
                   title: Text(
                     'Login',

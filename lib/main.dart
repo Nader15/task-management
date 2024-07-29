@@ -39,7 +39,7 @@ class _MyAppState extends State<MyApp> {
       localizationsDelegates: const [GlobalMaterialLocalizations.delegate],
       title: 'Task Management App',
       theme: ThemeData(
-        dividerTheme:  DividerThemeData(thickness: 1, color: AppColors.GREY_COLOR),
+        dividerTheme:  DividerThemeData(thickness: 1, color: AppColors.NEW_GREY_COLOR),
         checkboxTheme: const CheckboxThemeData(
           side: BorderSide(width: 1, color: AppColors.MAIN_COLOR),
         ),

@@ -16,7 +16,7 @@ class NotificationsIconWidget extends StatelessWidget {
           padding: EdgeInsets.all(5),
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(5.32),
-              border: Border.all(color: AppColors.GREY_COLOR)),
+              border: Border.all(color: AppColors.NEW_GREY_COLOR)),
           child: Stack(
             alignment: AlignmentDirectional.topEnd,
             children: [
@@ -24,8 +24,7 @@ class NotificationsIconWidget extends StatelessWidget {
               Container(
                   padding: EdgeInsets.all(1),
                   decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: AppColors.WHITE_COLOR),
+                      shape: BoxShape.circle, color: AppColors.WHITE_COLOR),
                   child: Icon(
                     Icons.circle,
                     color: AppColors.RED_COLOR,

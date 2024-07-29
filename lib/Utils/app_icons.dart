@@ -8,7 +8,6 @@ class AppIcons {
   static const String notification_icon = "assets/icons/notification_icon.svg";
   static const String category_icon = "assets/icons/category_icon.svg";
   static const String folder_icon = "assets/icons/folder_icon.svg";
-  static const String memoji_icon = "assets/icons/memoji_icon.png";
   static const String calendar_icon = "assets/icons/calendar_icon.svg";
   static const String selected_category_icon = "assets/icons/selected_category_icon.svg";
   static const String selected_folder_icon = "assets/icons/selected_folder_icon.svg";

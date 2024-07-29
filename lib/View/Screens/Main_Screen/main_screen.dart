@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:task_management/Utils/app_constants.dart';
+import 'package:task_management/Utils/app_images.dart';
 import '../../../Logic/controllers/main_controller.dart';
 import '../../../Utils/app_colors.dart';
 import '../../../Utils/app_icons.dart';
@@ -87,7 +88,7 @@ class MainScreen extends StatelessWidget {
                       onTap: () {
                         mainController.currentIndex.value = 3;
                       },
-                      child: Image.asset(AppIcons.memoji_icon),),
+                      child: Image.asset(AppImages.team_1_image,scale: 0.6,),),
                   ],
                 ),
               ],

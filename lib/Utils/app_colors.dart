@@ -10,7 +10,7 @@ class AppColors {
   static const Color SECOND_COLOR = Color(0xff8054A1);
   static const Color NEW_GREY_COLOR = Color(0xffD2D2D2);
   static const Color TEAL_COLOR = Color(0xff66B9B1);
-  static const Color PURPLE_COLOR = Color(0xff8054A1);
+  static const Color PURPLE_COLOR = Color(0xffD08CDF);
   static Color GREY_COLOR = Color(0xff96A0B5);
   static const Color GREY_Light_COLOR = Color(0xffFAFAFA);
   static const Color BLACK_COLOR = Colors.black;

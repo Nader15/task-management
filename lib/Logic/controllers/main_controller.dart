@@ -33,4 +33,6 @@ class MainController extends GetxController {
   }
 
 
+  var showPass = true.obs;
+
 }

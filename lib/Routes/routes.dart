@@ -16,7 +16,8 @@ class AppRoutes {
 
     GetPage(
       name: Routes.loginScreen,
-      page: () => const LoginScreen(),
+      page: () =>  LoginScreen(),
+        binding: MainBinding()
     ),
 
     GetPage(

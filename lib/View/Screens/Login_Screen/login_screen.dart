@@ -6,12 +6,13 @@ import 'package:task_management/Utils/app_colors.dart';
 import 'package:task_management/Utils/app_constants.dart';
 import 'package:task_management/Utils/app_icons.dart';
 
+import '../../../Logic/controllers/main_controller.dart';
 import '../../Widgets/custom_button.dart';
 import '../../Widgets/titled_textField.dart';
 
 class LoginScreen extends StatelessWidget {
-  const LoginScreen({super.key});
-
+   LoginScreen({super.key});
+  final mainController = Get.find<MainController>();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -35,17 +36,22 @@ class LoginScreen extends StatelessWidget {
                   title: 'Username / Email',
                   hintText: 'Enter Username / Email here',
                 ),
-                TitledTextField(
-                  obscureText: true,
-                  title: 'Password',
-                  hintText: 'Enter password here',
-                  suffixIcon: InkWell(
-                    onTap: () {},
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: SvgPicture.asset(AppIcons.eye_icon),
-                    ),
-                  ),
+                Obx(() {
+                    return TitledTextField(
+                      obscureText: mainController.showPass.value,
+                      title: 'Password',
+                      hintText: 'Enter password here',
+                      suffixIcon: InkWell(
+                        onTap: () {
+                          mainController.showPass.value = !mainController.showPass.value;
+                        },
+                        child: Padding(
+                          padding: const EdgeInsets.all(15.0),
+                          child: SvgPicture.asset(AppIcons.eye_icon),
+                        ),
+                      ),
+                    );
+                  }
                 ),
                 const SizedBox(height: 20),
                 Align(

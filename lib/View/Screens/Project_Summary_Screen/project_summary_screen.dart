@@ -11,8 +11,6 @@ class ProjectSummaryScreen extends StatelessWidget {
 
   final GlobalKey<ScaffoldState> _key = GlobalKey();
 
-
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -65,8 +63,7 @@ class ProjectSummaryScreen extends StatelessWidget {
                   projectStatusWidget(
                     color: Color(0xff3F8B8D),
                     number: 24,
-                    icon: Icons.verified
-                    ,
+                    icon: Icons.verified,
                     title: "Project\nCompeted",
                   ),
                   projectStatusWidget(
@@ -79,10 +76,7 @@ class ProjectSummaryScreen extends StatelessWidget {
               ),
               const SizedBox(height: 20),
               CustomButton(
-
-                onPress: () {
-
-                },
+                onPress: () {},
                 height: 56,
                 title: Text(
                   'View All Project',
@@ -92,19 +86,45 @@ class ProjectSummaryScreen extends StatelessWidget {
                 foregroundColor: AppColors.BLACK_COLOR,
                 borderSideColor: AppColors.BLACK_COLOR,
               ),
+              const SizedBox(height: 20),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    "Productivity",
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+                  ),
+                  IconButton(
+                    onPressed: () {},
+                    icon: Icon(Icons.more_horiz),
+                  )
+                ],
+              ),
+              const SizedBox(height: 10),
               SfCartesianChart(
                 // Initialize category axis
-                  primaryXAxis: CategoryAxis(
+                primaryXAxis: const CategoryAxis(
+                  majorGridLines: MajorGridLines(width: 0),
+                ),
+                primaryYAxis: const NumericAxis(
+                    minimum: 0,
+                    maximum: 80,
+                    isVisible: false,
+                    labelFormat: '{value}%'),
 
-                  ),
-                  series: <CartesianSeries<SalesData, String>>[
-                    ColumnSeries<SalesData, String>(
-                        dataSource: data,
-                        xValueMapper: (SalesData data, _) => data.year,
-                        yValueMapper: (SalesData data, _) => data.sales,
-                        name: 'Gold',
-                        color: Color.fromRGBO(8, 142, 255, 1))
-                  ]
+                series: <CartesianSeries<SalesData, String>>[
+                  ColumnSeries<SalesData, String>(
+                    borderRadius: BorderRadius.only(
+                      topRight: Radius.circular(10.0),
+                      topLeft: Radius.circular(10.0),
+                    ),
+                      dataSource: data,
+                      xValueMapper: (SalesData data, _) => data.year,
+                      yValueMapper: (SalesData data, _) => data.sales,
+                      color: Color(0xff191D2B),
+                      dataLabelSettings: DataLabelSettings(isVisible: !true))
+                ],
+                tooltipBehavior:   TooltipBehavior(enable: true, header: '', canShowMarker: false,),
               )
             ],
           ),
@@ -152,6 +172,7 @@ class ProjectSummaryScreen extends StatelessWidget {
       ),
     );
   }
+
   List<SalesData> data = [
     SalesData('Jan', 35),
     SalesData('Feb', 28),
@@ -161,6 +182,7 @@ class ProjectSummaryScreen extends StatelessWidget {
     SalesData('Jun', 50),
   ];
 }
+
 class SalesData {
   SalesData(this.year, this.sales);
 
